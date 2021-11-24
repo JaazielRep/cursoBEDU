@@ -1,0 +1,36 @@
+NPM - Node Package Manager
+
+1. INSTALACION NODEJS - https://nodejs.org/es/
+
+	*** NODE JS (https://www.youtube.com/watch?v=OMhMnj7SBRQ)
+
+	1 - https://nodejs.org/es/
+	2 - "Otras descargas" https://nodejs.org/es/download/
+	3 - Instale Node.js mediante un gestor de paquetes
+	4 - Distribuciones de Linux basadas en Debian y Ubuntu, Enterprise Linux/Fedora y Snap
+	5 - Las distribuciones de binarios oficiales de Node.js
+	6 - https://github.com/nodesource/distributions/blob/master/README.md
+	7 - Abrir terminal
+	8 - curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+	9 - sudo apt-get install -y nodejs
+	10 - https://www.npmjs.com/package/http-server
+	11 - sudo npm install --global http-server
+	12 - En la consola posicionarse en la carpeta que se quiera levantar el servidor.
+	13 - http-server -p 8090
+	14 - Abrir en un navegador localhost:8090
+	
+2. INSTALACION TYPESCRIPT - https://www.npmjs.com/package/typescript
+	
+	*** TypeScript (https://www.youtube.com/watch?v=Xxqh0RoWxNc&t=825s)
+	
+	1 - Una vez instalado NODEJS, abrir terminal y ejecutar el siguiente comando: sudo npm install -g typescript
+	2 - Para confirmar la instalacion, escribir en consola: tsc --version
+	
+3. COMPILACION
+	
+	1 - Al querer compilar el archivo.ts se debera realizar desde consola.
+	2 - Abrir consola en la carpeta en donde el archivo.ts se encuentra.
+	3 - digitar en al consola: tsc archivo.ts
+	4 - Se generara un archivo.js al mismo nivel del archivo compilado.
+	5 - Para no estar compilando en cada cambio, se debe digitar: tsc archivo.ts -w de esta forma, acada que se guarde el archivo se compilara de forma automatica.
+	

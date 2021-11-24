@@ -1,0 +1,75 @@
+NPM - Node Package Manager
+NG - Next Generation
+*** DETENER SERVIDOR: sudo kill $(sudo lsof -t -i:4200)  ***
+
+1. INSTALACION NODEJS - https://nodejs.org/es/
+
+	*** NODE JS (https://www.youtube.com/watch?v=OMhMnj7SBRQ)
+
+	1 - https://nodejs.org/es/
+	2 - "Otras descargas" https://nodejs.org/es/download/
+	3 - Instale Node.js mediante un gestor de paquetes
+	4 - Distribuciones de Linux basadas en Debian y Ubuntu, Enterprise Linux/Fedora y Snap
+	5 - Las distribuciones de binarios oficiales de Node.js
+	6 - https://github.com/nodesource/distributions/blob/master/README.md
+	7 - Abrir terminal
+	8 - curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+	9 - sudo apt-get install -y nodejs
+	10 - https://www.npmjs.com/package/http-server
+	11 - sudo npm install --global http-server
+	12 - En la consola posicionarse en la carpeta que se quiera levantar el servidor.
+	13 - http-server -p 8090
+	14 - Abrir en un navegador localhost:8090
+
+2. INSTALACION ANGULAR-CLI - https://angular.io/cli
+	1 - Ya instalado NODE JS ejecutar en consola: sudo npm install -g @angular/cli
+	2 - Esperar a que instale.
+	3 - Posterior a la instalacion, validar la version: ng --version
+
+3. INICIAR UN PROYECTO
+	1 - Abrir consola y posicionarse en donde se estara trabajando
+	2 - Para obtener ayuda sobre los comandos que se pueden utilizar, escribir: ng -help
+	3 - digitar en consola: ng new nombreDeProyecto.
+	4 - Seleccionar el framework de hoja de estilos de preferencia.
+	5 - Posterior a esto, se habra creado una carpeta en el destino elegido con el nombre del proyecto
+	6 - Dentro de VSCode: Terminal -> New Terminal y posicionarse en la carpeta que se creo desde consola en donde trabajaremos con angular
+	7 - Digitar: ng serve --o
+	8 - Comenzara la compilacion
+	9 - Se preguntara si deseamos compartir informacion de forma anonima y posterior a esto, se abrira nuestro navegador web con un localhost.
+	10 - Lo que aparece en el navegador, esta localizado dentro de la carpeta que se creo en la carpeta SRC y despues dentro de APP.
+	11 - Comenzar a trabajar dentro de este ambito.
+	12 - Cada que se guarde el archivo modificado, se compilara y podra verse reflejado en el navegador sin necesidad de actualizar.
+	
+4. AÑADIR CSS - https://getbootstrap.com/
+	1 - Se Puede añadir mediante un <link> copiando directo de la pagina oficial en GET STARTED
+	2 - Añadire mediante npm
+	3 - En la pagina principal, dirigirse a Download
+	4 - Buscar por NPM
+	5 - Mediante la consola posicionarse en la carpeta del proyecto donde necesitemos Bootstrap
+	6 - ejecutar: npm install bootstrap
+	7 - Posterior a la instalacion, en el archivo package.json dentro de la raiz estara registrado dentro de las dependencias, "bootstrap":"Verson"
+	9 - De igual forma, dentro de la carpeta node_modules estara creada la carpeta "Bootstrap"
+	10 - Para utilizar sus funcionalidades en el archivo style.css se debera importar el archivo bootstrap: @import '~bootstrap/dist/css/bootstrap.min.css'
+	11 - La instruccion anterior indica que dentro de la carpeta node_modules buscara el archivo indicado.
+	
+5. Hacer DEPLOY para poner el proyecto disponible en internet.
+	1 - Abrir la ruta en donde se encuentra el proyecto mediante terminal.
+	2 - Digitar: ng build --prod
+	3 - Se generara una carpeta dentro del proyecto llamada: dist
+	4 - Registrarse en: netlify.com
+	5 - Arrastrar el proyecto al sitio.
+	6 - Probar que funcione correctamente.
+	
+6. Editar un proyecto ajeno.
+	1 - Descargar carpeta.
+	2 - Posicionarse por medio de consola.
+	3 - Digitar: npm install
+	4 - Editar en IDE preferido.
+	
+	
+	70%
+	30% prevision
+	15 dias de vacaciones
+	SGMM
+	SGMM
+	SiVale

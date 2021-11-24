@@ -1,0 +1,9 @@
+DIFERENCIAL ES PARCIAL 
+
+.mdf
+.bin
+
+no funciona solamente 	que tenga la misma configuracion desde service pack y diferente mas 
+
+
+

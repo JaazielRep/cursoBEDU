@@ -1,0 +1,23 @@
+.card-header{
+    background-color: rgb(185, 202, 248);
+}
+.tab-pane{
+    background-color: rgb(232, 238, 255);
+}
+.nav-item > a{
+    color: black !important;
+}
+.nav-item:hover{
+    background-color: rgb(226, 226, 226);
+}
+#EVTAB table{
+    background-color: white;
+}
+
+/* #EVTAB table td{
+    flex-flow: wrap;
+    align-content: center;
+} */
+#EVTAB table tr:hover{
+    background-color: rgb(232, 238, 255);
+}

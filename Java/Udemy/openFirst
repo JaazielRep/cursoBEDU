@@ -1,0 +1,24 @@
+########################################
+#		Modulo 2		#
+########################################
+
+- Para crear una nuevo programa en JAVA de forma rapida se deberán ejecutar los siguientes pasos:
+
+	- Menu File
+	- New Project...
+	- Java with Ant
+	- Java application
+	- Project name (Escribir el nombre del proyecto)
+	- La opcion Create main class es opcional.
+	- Finish
+	
+- Al terminar, se creara una carpeta en la pestaña de proyectos, dentro de este proyecto se deberan ejecutar los siguientes pasos:
+
+	- Click derecho en el poyecto creado.
+	- New.
+	- Java Class.
+	- Como primer proyecto indicar el nombre que se desee, empezando con mayuscula y si tiene mas de una palabra, deberá ir pegado iniciando cada palabra con mayuscula la primer letra.
+
+Al finalizar, se creará un archivo con extensión .java en donde podremos comenzar a colocar código.
+
+

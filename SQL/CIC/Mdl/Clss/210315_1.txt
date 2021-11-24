@@ -1,0 +1,37 @@
+Muestre los vendedores que han tenido ventas mayores a 30000
+pesos, ordenando el resultado por el monto de ventas
+
+-monto de ventas
+-ventas mayores a 30000
+-ordenando por monto total de ventas
+
+
+---Con agrupamiento se usa HAVING y no where
+SELECT FROM Venta v
+INNER JOIN Vuelo vu
+ON v.IdVuelo = vu.VueloId
+GROUP BY idVendedor
+HAVING Asientos comprados * PrecioporAsiento >= 30000
+
+
+SELECT FROM Venta v, idVendedor, SUM(Asientoscomprados * PrecioporAsiento)
+INNER JOIN Vuelo vu
+ON v.IdVuelo = vu.VueloId
+GROUP BY idVendedor
+HAVING SUM(Asientoscomprados * PrecioporAsiento) >= 30000
+
+
+SELECT FROM Venta v, idVendedor, 
+SUM(Asientoscomprados * PrecioporAsiento) AS VentaTotal
+INNER JOIN Vuelo vu
+ON v.IdVuelo = vu.VueloId
+GROUP BY idVendedor
+HAVING VentaTotal >= 30000
+
+
+---Con Where, se usa cuando no lleva agrupadores
+SELECT FROM venta v
+INNER JOIN vuelo vu
+ON v.idVuelo = vu.vueloId
+Where AsientosComprados * PrecioporAsiento >= 30000
+

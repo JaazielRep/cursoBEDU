@@ -1,0 +1,353 @@
+<div class="col mt-4 mb-4">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">
+                DataBinding
+            </h3>
+        </div>
+        <div class="card-body">
+                <ul class="nav nav-tabs nav-justified" data-toggle="tab">
+                    <li class="nav-item">
+                        <a href="#DTBINTERP" class="nav-link active" data-bs-toggle="tab">
+                            Interpolation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#DTBPROPER" class="nav-link" data-bs-toggle="tab">
+                            Property binding
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#DTBEVENTB" class="nav-link" data-bs-toggle="tab">
+                            Event Binding
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#DTBTWOWAY" class="nav-link" data-bs-toggle="tab">
+                            Two way binding
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="DTBINTERP">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <br>
+                                El manejo de datos mediante <b><i>interpolacion</i></b>, hace referencia al envio de datos desde el archivo TypeScript hacia el etiquetado HTML. Para realizar una interpolacion, es necesario definir un valor dentro de la clases principal del componente y posterior a esto, referenciarlo mediante '<b>&#123; &#123;</b>&#10101;&#10101;'.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <br>
+                                Ejemplo:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>TypeScript:</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3">
+                                <br>
+                                <p><i>export class NombreClaseComponente implements OnInit <b>&#123;</b></i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;<b><u>textoInterpolacion</u></b> = "Titulo por interpolacion"</i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;constructor() <b>&#123;</b> &#10101;</i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;ngOnInit(): void <b>&#123;</b>&#10101;</i></p>
+                                <p><i>&#10101;</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>HTML:</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3 text-center">
+                                <br>
+                                <p><i><u>&#60;span&#62; <b>&#123;&#123;</b> <b>textoInterpolacion</b> &#10101;&#10101; &#60;/span&#62;</u></i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3 text-center">
+                                <br>
+                                <p>Hola, soy un <i><u>{{textoInterpolacion}}</u></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="DTBPROPER">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <br>
+                                Con <b><i>Property binding</i></b> se podrá asignar asignar el valor de una propiedad de un objeto HTML desde el archivo TypeScript. Para esto se requiere el uso de corchetes simples <b>&#91; &nbsp; &#93;</b> y como valor de la propiedad el nombre de la variable declarada.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <br>
+                                Ejemplo:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>TypeScript:</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3">
+                                <br>
+                                <p><i>export class NombreClaseComponente implements OnInit <b>&#123;</b></i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;<b><u>propertyBinding1</u></b> = "readonly"</i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;<b><u>propertyBinding2</u></b> = "form-control"</i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;constructor() <b>&#123;</b> &#10101;</i></p>
+                                <p><i>&nbsp;&nbsp;&nbsp;&nbsp;ngOnInit(): void <b>&#123;</b>&#10101;</i></p>
+                                <p><i>&#10101;</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>HTML:</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2 text-center">
+                                <br>
+                                <small><p>&#60;input id="inputId" name="inputName1" <i><b>&#91;class&#93;</b>=<b>"propertyBinding2"</b></i> <i><b>&#91;readonly&#93;</b>=<b>"propertyBinding1"</b></i>&#62;<u></u></p></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 offset-lg-4">
+                                <input type="text" id="inputId1" name="inputName1" [class]="propertyBinding2" [readonly]="propertyBinding1">
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="tab-pane" id="DTBEVENTB">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <br>
+                                        Con <b><i>Event binding</i></b> se encarga de ejecutarse al momento de registrar el evento asignado al objeto HTML, como un click, mouseover, entre otros... Para poder utilizar <b><i>event binding</i></b> se requiere de una funcion del lado de TypeScript, esta funcion sera invocada mediante un evento de HTML y ejecutara lo que el bloque de codigo contenga.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <br>
+                                        <ul class="nav nav-tabs nav-justified" data-toggle="tab">
+                                            <li class="nav-item">
+                                                <a href="#EVBIN" class="nav-link active" data-bs-toggle="tab">
+                                                    Ejemplo
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#EVTAB" class="nav-link" data-bs-toggle="tab">
+                                                    Eventos
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="EVBIN">
+                                            <div class="row">
+                                                <div class="col-lg-8 offset-lg-2">
+                                                    <br>
+                                                    <b>TypeScript:</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 offset-lg-3">
+                                                    <br>
+                                                    <p><i>export class NombreClaseComponente implements OnInit <b>&#123;</b></i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;<b><u>eventBinding1</u></b> = "";</i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;constructor() <b>&#123;</b> &#10101;</i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;ngOnInit(): void <b>&#123;</b>&#10101;</i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;funcionClick1(): void <b>&#123;</b></i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<b><u>eventBinding1</u></b>="Boton presionado!!!"</i></p>
+                                                    <p><i>&nbsp;&nbsp;&nbsp;&nbsp;&#10101;</i></p>
+                                                    <p><i>&#10101;</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-8 offset-lg-2">
+                                                    <br>
+                                                    <b>HTML:</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-8 offset-lg-2 text-center">
+                                                    <br>
+                                                    <small><p>&#60;button <i><b>(click)</b>=<b>"funcionClick1()"</b></i>&#62;Click!&#60;/button&#62;</p></small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <br>
+                                                <div class="col-lg-6 offset-lg-3">
+                                                    <div class="col-lg-6">
+                                                        <button class="form-control btn btn-info" (click)="funcionClick1()">Click!</button>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <span>{{eventBinding1}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="tab-pane" id="EVTAB">
+                                            <div class="row">
+                                                <div class="col-lg-10 offset-lg-1">
+                                                    <br>
+                                                    <table class="table table-bordered table-responsive" id="tablaEventos">
+                                                        <thead>
+                                                            <th>
+                                                                Nombre
+                                                            </th>
+                                                            <th>
+                                                                Evento
+                                                            </th>
+                                                            <th>
+                                                                Descripción
+                                                            </th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Click</td>
+                                                                <td><strong>(click)=”clickFunction()”</strong></td>
+                                                                <td>When we need to do some action on element click on that time bind these event on that element. </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Double Click</td>
+                                                                <td><strong>(dblclick)=”dbclickFunction()”</strong></td>
+                                                                <td>When we need to do some action on double click on element at that time bind these event. </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Blur</td>
+                                                                <td><strong>(blur)=”blurFunction()”</strong></td>
+                                                                <td>The blur event fires when an element has lost focus. Mainly used in Form elements.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Focus</td>
+                                                                <td><strong>(focus)=”focusFunction()”</strong></td>
+                                                                <td>The focus event fires when an element has received focus.Mainly used in Form elements.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Submit</td>
+                                                                <td><strong>(submit)=”submitFunction()”</strong></td>
+                                                                <td>When we want to submit form we trigger “submit” event. </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Scroll</td>
+                                                                <td><strong>(scroll)=”scrollFunction()”</strong></td>
+                                                                <td>When we Scroll the page it fires these event.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Keyup</td>
+                                                                <td><strong>(keyup)=”keyupFunction()”</strong></td>
+                                                                <td>The keyup event is fired when a key is released from the keyboard.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Keypress</td>
+                                                                <td><strong>(keypress)=”keypressFunction()”</strong></td>
+                                                                <td>The keypress event is fired when a key that produces a character value is pressed down.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Keydown</td>
+                                                                <td><strong>(keydown)=”keydownFunction()”</strong></td>
+                                                                <td>The keydown event is fired when a key is pressed.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mouse Up</td>
+                                                                <td><strong>(mouseup)=”mouseupFunction()”</strong></td>
+                                                                <td>The mouseup event is fired at an Element when a button on a pointing device (such as a mouse) is released while the pointer is located inside it.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mouse Down</td>
+                                                                <td><strong>(mousedown)=”mousedownFunction()”</strong></td>
+                                                                <td>The mousedown event is fired at an Element when a pointing device button is pressed while the pointer is inside the element.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mouse Enter</td>
+                                                                <td><strong>(mouseenter)=”mouseenterFunction()”</strong></td>
+                                                                <td>The mouseenter event is fired at an Element when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Cut</td>
+                                                                <td><strong>(cut)=”cutFunction()”</strong></td>
+                                                                <td>The cut event is fired when the user has initiated a “cut” action through the browser’s user interface.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>copy</td>
+                                                                <td><strong>(copy)=”copyFunction()”</strong></td>
+                                                                <td>The copy event fires when the user initiates a copy action through the browser’s user interface.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Paste</td>
+                                                                <td><strong>(paste)=”pasteFunction()”</strong></td>
+                                                                <td>The paste event is fired when the user has initiated a “paste” action through the browser’s user interface.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Drag</td>
+                                                                <td><strong>(drag)=”dragFunction()”</strong></td>
+                                                                <td>The DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Drop</td>
+                                                                <td><strong>(drop)=”dropFunction()”</strong></td>
+                                                                <td>Drop event fire when we leave the pointing device.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dragover</td>
+                                                                <td><strong>(dragover)=”dragoverFunction()”</strong></td>
+                                                                <td>The dragover event is fired when an element or text selection is being dragged over a valid drop target.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="DTBTWOWAY">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <br>
+                                Con <b><i>Two way binding</i></b> conocido tambien como <b>Banana in a box syntax</b> permite trabajar datos desde el formulario HTML y procesarlos en el archivo TypeScript y mostrarlos al momento de nuevo dentro del documento HTML su sintaxis es: <b>&#91; (&nbsp;) &#93;</b>. 
+                                <i><u> Para poder utilizar este metodo, es requerido importar un modulo en nuestro proyecto, con nombre : FormsModule. Esto nos permitira utilizar la propiedad ngModel dentro de nuestros objetos HTML.</u></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>app.module.ts:</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3">
+                                <br>
+                                <i><p>...</p>
+                                <p>imports: [</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;BrowserModule,</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<b><i><u>FormsModule</u></i></b></p>
+                                <p>],</p>
+                                <p>...</p></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <br>
+                                <b>HTML:</b>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

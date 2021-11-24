@@ -1,0 +1,97 @@
+* Se requiere previa instalación de NodeJs
+
+-Validar versión de node:
+	node -v
+-Validar versión de npm(Node Package Manager):
+	npm -v
+
+-Instalar yarn(otro package manager):
+	sudo npm installa -g yarn
+
+-Validar versiónde yarn:
+	yarn -v
+
+-Descargar el Framework EXPO para crear proyectos con React:
+	sudo yarn global add expo-cli
+
+-Crear un nuevo proyecto:
+	expo init NombreApp
+	
+-Para realizar una prueba de ejecución de la aplicación creada se tienen dos opciones: emular un dispositivo o correrla en el telefono.
+
+-Colocarse mediante la consola dentro de la carpeta raiz del proyecto.
+
+-En caso de emular en un IDE se debera ejecutar:
+	sudo yarn android
+	sudo yarn ios
+	
+-En caso de emular en un dispositivo movil se requiere descargar la aplicación de Expo Go
+
+-Mediante CLI se ejecutara:
+	sudo yarn start
+	
+-Al levantar el proyecto se indicara un URL(http://localhost:19002/).
+
+-Al ingresar en esta URL se debera escanear el codigo QR con la app en caso de Android o con la camara en caso de iOs para ser dirigido a la app.
+
+
+##########################################################
+#SE DEBE DESACTIVAR FIREWALL PARA CONECTAR CON TELEFONOS.#
+##########################################################
+
+sudo ufw status
+sudo ufw status verbose
+
+sudo ufw disable
+
+sudo ufw enable
+
+########################
+#Estructura de carpetas#
+########################
+
+Dentro de cada proyecto de React Native con EXPO se tendra una serie de archivos y carpetas creadas por el sistema.
+
+-.expo y .expo-shared: generalmente no deberán ser modificadas.
+-assets: guarda se utilizara para almacenar las imagenes utilizadas, al inicio contiene imagenes pre cargadas.
+-node_modules: Almacenara las dependencias a utilizar por el proyecto.
+-package.json: Archivo inicial en donde se definen dependencias o comandos a ejecutar en la consola.
+-yarn.lock: Archivo que almacena el log de las versiones ejecutadas.
+-babel.config.js: Archivo para almacenar configuraciones de babel en caso de ser necesario.
+-app.json: Archivo de configuraciones del proyecto, hay documentación oficial.
+-app.js: Archivo principal para desarrollar.
+
+
+	
+###############################
+#Instalación de Android Studio#
+###############################
+
+-Descargar Android Studio.
+-En la carpeta donde se descargo el archivo .tar.gz, descomprimir con el siguiente comando:
+	tar -xzvf android-studio-2020.3.1.25-linux.tar.gz ./
+	
+-Tomar el control de la carpeta OPT con el siguiente comando: 
+	sudo chown -R $USER:$USER /opt/
+
+-Mover la carpeta que se genero al dsecomprimir el archivo .tar.gz a /opt.
+	-En archivos: 
+		"Other locations"
+		"Computer"
+		"opt"
+
+-Mediante consola, moverse a la carpeta de android studio que se copio dentro de OPT y ejecutar el siguiente archivo:
+	./studio.sh
+
+
+"More Actions"
+
+"AVD Manager"
+
+Seleccionar dispositivo, descargar software e iniciar crear el emulador.
+
+En la carpeta del proyecto (codigo) ejecutar: sudo yarn android
+
+Se ejecuta en consola y coloca una URL con localhost para abrir
+
+En el emulador se musetra la app en automatico.

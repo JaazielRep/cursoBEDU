@@ -1,0 +1,6 @@
+####################
+#	JAVA	   #
+####################
+
+JDK - Java Development Kit, consta de 3 componentes: JRE, compilador y API de desarrollo.
+JRE - Java Runtime Environment, maquina virtual que apoya a ser multiplataforma.

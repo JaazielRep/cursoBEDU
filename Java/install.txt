@@ -1,0 +1,39 @@
+####################
+#	JAVA	   #
+####################
+
+Instalacion.
+
+	1. Descargar JAVA: 
+		https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html
+		
+	2. Instalar mediante terminal: 
+		sudo dpkg -i jdk-15.0.2_linux-x64_bin.deb
+		$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-15.0.2/bin/java 1
+		$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-15.0.2/bin/javac 1
+		$ java --version
+		
+	3. Configurar PATH y JAVA_HOME:
+		sudo update-alternatives --config java
+		sudo gedit /etc/environment
+	
+	4. Al ejecutar el ultimo comandose abrira un archivo de texto ya configurado con el PATH, posterior a esto, se debera indicar la dirección del JAVA_HOME, dicha dirección será en donde recien se configuro JAVA:
+		PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+		JAVA_HOME="/usr/lib/jvm/jdk-15.0.2"
+		
+	5. Validar variable JAVA_HOME:
+		source /etc/environment
+		echo $JAVA_HOME
+		
+		
+####################
+#	NET BEANS  #
+####################
+
+Instalación mendiante SNAP.
+	
+	1. snap es un gestor de paquetes en donde se puede encontrar netbeans y ahorrar tiempo de instalación. Digitar en terminal:
+		$ snap find netbeans
+		
+	2. Una vez encontrado el paquete requerido, se procede a la instalación:
+		$ sudo snap install netbeans --classic

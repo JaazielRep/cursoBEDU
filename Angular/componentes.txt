@@ -1,0 +1,43 @@
+########################################
+		COMPONENTES		#
+########################################
+
+*** Los componentes son bloques de codigo que podrán ser reutilizados en otros proyectos.
+	Estos componentes podrian ser barras de menu, carruseles, secciones, etc...
+	Existen dos formas de generar componentes:
+
+	
+*** CREAR COMPONENTE DE FORMA MANUAL
+
+	1 - Dentro del proyecto en donde se vaya a utilizar el componente, posicionarse en la carpeta: serc > app.
+	2 - Crear una nueva carpeta con el nombre que se vaya a asignar a dicho componente.
+	3 - Dentro de la carpeta creada, generar un archivo con nombre similar a la carpeta e indicar que es un componente de tipo TS: 
+					miComponente.component.ts
+	4 - Dentro de este archivo existen tres secciones importantes:
+		-import {Component} from 'angular/core'; //Generalmente es creado al colocar la siguiente linea.
+		-@Component({...}); //Al crear este componente, se generara la linea de import en la parte superior. Dentro de este elemento se necesita indicar minimo:
+			-selector : 'nombreSelector' //Esta linea indica como invocaremos el selector en el archivo html raiz <nombreSelector></nombreSelector>.
+			-template/templateUrl: `<div></div>` / './miComponente.component.html' //Con esta indicacion se podra definir el esqueleto HTML que nuestro componente 
+				utilizara. Se puede definir dentro de el archivo .ts o crear un nuevo archivo .component.html que contendra todo el etiquetado HTML-
+			-styles/styleUrls: ['.cl{color: red}'] / ['./miComponente.component.css'] // Aqui se define el estilo que tendran los elementos, de igual forma, puede ser texto 
+				plano y definirse todo dentro de esta linea o referenciar un archivo que contenga los estilos a utilizar en el DOM.
+		-export class miComponenteComponent{...} // Dentro de esta clase se contendra todo el desarrollo en TS que hara funcionar al componente.
+	5 - Dentro de la carpeta app en el archivo de app.module.ts se debera informar que se utilizara dicho componente:
+		- import { miComponenteComponent } from './carpetaComponente/miComponente.component';
+		- Dentro de @NgModule > declarations indicar el nombre de la clase del componente, que importamos previamente: miComponenteComponent.
+	6 - Dentro de la carpeta app, en el archivo app.component.html colocar el selector definido dentro de @Component, en este caso <nombreSelector></nombreSelector>.
+	7 - Al correr el proyecto general, este componente creado ya formara parte de la aplicacion.
+
+
+*** CREAR COMPONENTE MEDIANTE CLI
+	1 - Posicionarse en el proyecto donde se quiera generar un nuevo componente.
+	2 - Digitar: ng generate component miComponenteCLI
+	3 - Dentro del proyecto, en la carpeta app, se habra creado una nueva carpeta con el nombre del componente que indicamos anteriormente.
+	4 - Dentro de la carpeta del componente creado, estaran los archivos necesarios para poder trabajar, los archivos que se crean de forma automatica son:
+		- miComponenteCLI.component.html
+		- miComponenteCLI.component.css
+		- miComponenteCLI.component.ts
+		- miComponenteCLI.component.specs.ts
+	5 - Dentro del archivo miComponenteCLI.component.ts ya tendremos creado el import, @Component y la clase con el nombre del proyecto con Component concatenado: MiComponenteCLIComponent.
+	6 - Adicional a esto, dentro del proyecto en el archivo app.module.ts se habra importado la clase creada y la declaracion dentro de NgModules
+	
