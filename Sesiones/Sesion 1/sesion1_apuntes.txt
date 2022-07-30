@@ -1,0 +1,33 @@
+ATAJOS
+
+--VSCode
+
+CTRL + J: Abrir terminal
+
+
+--Terminal
+
+pwd         - Retorna la ruta en donde se eencuentra posicionada la consola.
+ls          - Acronimo de List, retornara la lista de los elementos pertenecientes a la carpeta.
+cd NNN      - Acronimo de Change Directory, mueve la posicion de la terminal, necesita la ruta 
+                despues del comando, por ejemplo; 
+                    'cd carpetaTest'    para trabajar dentro de la carpeta carpetaTest
+                    'cd ..'             para regresar una carpeta atras
+clear       - Limpia la pantalla
+code .      - Abre visual studio code con el contenido de la carpeta en donde se ecuentra la terminal
+
+--html
+
+Elementos semanticos    - Objetos que describen su contenido, anteriormente solo se hacian maquetas con
+                            la etiqueta div, ahora con elementos semanticos se pueden reemplazar con 
+                            elementos semanticos como las etiquetas:
+                            -header
+                            -nav
+                            -section
+                            -main
+                            -aside
+                            -article
+                            -footer
+
+
+Desarrollo en falso     - Desarrollar de mas por no tener una buena definicion del entregable.
