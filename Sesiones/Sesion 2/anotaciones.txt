@@ -1,7 +1,10 @@
-GIT
+-- GIT
 
 git init .
 git status
 git add -A  /   git add .
 git commit -m "Comentarios"
 git log
+
+
+-- FLEXBOX

@@ -4,15 +4,41 @@
     color: white !important;
     height: 600px !important;
     margin: 10px 10px 10px 10px;
-
 }
 
+/*
+http://www.flexboxdefense.com/
+*/
+
 #div_container div{
-    width: 35%;
+    width: 35% !important;
     margin-left: 10%;
     margin-top: 33px;
     display: inline-block;
     height: 250px;
-    background: url("perro.jpeg") aqua no-repeat;
-    background-size: cover;
+    /*background: url("perro.jpeg") aqua no-repeat;
+    background-size: cover;*/
+}
+
+#contenedor_hijo1{
+    background-color: greenyellow !important;
+}
+#contenedor_hijo2{
+    background-color: plum;
+}
+#contenedor_hijo3{
+    background-color: maroon;
+}
+#contenedor_hijo4{
+    background-color: green;
+}
+
+img{
+    margin-top: 15%;
+    margin-left: 30%;
+    max-width: 100%;
+    max-height: 50%;
+    height: inherit;
+    width: inherit;
+    object-fit: cover !important;
 }
