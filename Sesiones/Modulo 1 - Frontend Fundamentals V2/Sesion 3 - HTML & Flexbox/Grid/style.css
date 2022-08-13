@@ -97,4 +97,5 @@ grid-template-columns  -  coloca a todos los hijos en una columna de 300 px;
 
 .div-imgArt{
     background-color: aquamarine;
+    max-width: 100%;
 }
