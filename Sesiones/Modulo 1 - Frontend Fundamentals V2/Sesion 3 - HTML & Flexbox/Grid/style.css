@@ -1,0 +1,100 @@
+/* quita margen */
+body{
+    margin: 0px;
+}
+
+/*
+display:flex - Acomoda los elementos hijos en fila, respetando la altura del elemento largo.
+*/
+.container-header{
+    width: 100%;
+    background: #fffbf7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-color: #025157;
+}
+
+.container-header > img{
+    /*background-color: blueviolet;*/
+    padding: 20px;
+}
+
+.container-nav{
+    /*background-color: blueviolet;*/
+    width: 700px;
+}
+
+.container-nav > ul{
+    /*background-color: cadetblue;*/
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* ???
+.container-nav > ul > li{
+    display: inline-block;
+}
+*/
+
+.container-nav > ul > li > a{
+    color:#025157;
+    text-decoration: none;
+}
+
+.container-inicioSesion{
+    /*background-color: burlywood;*/
+    padding: 20px;
+}
+
+.container-inicioSesion > a{
+    text-decoration: none;
+}
+
+
+.container-inicioSesion > .btn-header{
+    color: white;
+    background-color: #67b54b;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/*
+####################### section .container-grid1
+grid-template-columns  -  coloca a todos los hijos en una columna de 300 px; 
+                            si se asgianan mas valores, se definira una columna por valor.
+                            repeat(4, 300px) es lo mismo que poner 4 veces 300px 
+
+*/
+
+
+#container-grid1{
+    background-color: #025157;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 700px;
+    padding: 5%;
+}
+
+#container-grid1 > article{
+    background-color:aliceblue;
+    height: 330px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.div-conArt{
+    background-color: #67b54b;
+    padding: 15px;
+}
+
+.div-imgArt{
+    background-color: aquamarine;
+}

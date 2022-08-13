@@ -1,0 +1,19 @@
+##############################################################################################
+#                                           G I T                                            #
+##############################################################################################
+
+• git config        : Con este comando se configurarán los parametros generales de GIT como
+                        el usuario que estara trabajando en el ordenador y el mail.
+                                $ git config --global user.name "Tu nombre"
+                                $ git config --global user.email tuMail@dominio.com
+• git config --list : Comando para visualizar las configuraciones básicas realizadas.
+--Añadiendo github para alojar en "la nube"
+
+• git config -l     : 
+• git init          : Iniciar un repositorio.
+• git status        : Visualizar el estado del repositorio, en verde los archivos 
+                        que ya se encuentran en el repositorio y en rojo los archivos
+                        que aun se encuentran sin añadir al stage.
+• git commit        : Se debe complementar con -m "TEST", el comando quedaria como
+                                $ git commit -m "Mi primer commit
+                        con este comando se añaden los cambios al stage.
