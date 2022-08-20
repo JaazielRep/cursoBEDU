@@ -6,14 +6,47 @@
                         el usuario que estara trabajando en el ordenador y el mail.
                                 $ git config --global user.name "Tu nombre"
                                 $ git config --global user.email tuMail@dominio.com
-• git config --list : Comando para visualizar las configuraciones básicas realizadas.
---Añadiendo github para alojar en "la nube"
+                                $ git config remote.origin.url https://github.com/JaazielRep/cursoBEDU.git
 
-• git config -l     : 
 • git init          : Iniciar un repositorio.
 • git status        : Visualizar el estado del repositorio, en verde los archivos 
                         que ya se encuentran en el repositorio y en rojo los archivos
                         que aun se encuentran sin añadir al stage.
+
 • git commit        : Se debe complementar con -m "TEST", el comando quedaria como
                                 $ git commit -m "Mi primer commit
                         con este comando se añaden los cambios al stage.
+
+• git config --list •git config -l : Comando para visualizar las configuraciones básicas realizadas.
+
+--Añadiendo github para alojar en "la nube" segun GIT
+
+• git remote add origin https://miliga/miRepositorio.git :Se define el repositorio en donde se estará trabajando
+                                                                y enviando los datos.
+
+• git push -u origin main :Se indica el nombre de la rama principal que se mandara a github, main es predefinida
+                                por github, en repositorios locales la rama principal es master
+
+
+#########################################################
+#               ERROR - Borrar .git local               #
+#########################################################
+
+- Se genera nueva estructura de carpetas
+- Se borra .git local porque se tenia en una carpeta padre
+- Se genera una subcarpeta con otro nombre y se crea repositorio git local dentro de esa carpeta
+- Se realiza push y no se logra integrar
+- Se genera una nueva carpeta y se utiliza git clone para bajar repositorio en nueva carpeta
+- Se realiza git push origin master y arroja el siguiente error:
+        error: src refspec master does not match any
+- Se revisan ramas locales y solo se tiene main
+- Se crea master con 
+        git branch master
+        checkout master
+- Se realiza de nuevo git push origin master y arroja el siguiente error:
+        error: failed to push some refs to 'https://github.com/JaazielRep/cursoBEDU.git'
+        hint: Updates were rejected because the remote contains work that you do
+        hint: not have locally. This is usually caused by another repository pushing
+        hint: to the same ref. You may want to first integrate the remote changes
+        hint: (e.g., 'git pull ...') before pushing again.
+        hint: See the 'Note about fast-forwards' in 'git push --help' for details.
