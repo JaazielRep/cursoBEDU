@@ -1,0 +1,59 @@
+En consola existe dos ejecuciones, usuario ($) y administrador (#).
+Si se quieren ejecutar comandos como administrador estando con un usuario normal, se debe anteponer la palabra sudo 
+Si se desea cambiar la terminal de usuario a administrador se debera digitar sudo su
+
+
+#           -- Comentario
+
+ls
+
+ls -a       -- Muestra carpetas y archivos ocultos
+
+ll          -- Lista los archivos dentro de la carpeta con sus propiedades, el primer bloque de propiedades indica que tipo de archivo es:
+
+        l - Liga simbolica
+        d - Carpeta
+        - - Archivo
+
+nautilus .  -- Abre el explorador de archivos en donde se encuentra ubicada la terminal en linux
+open .      -- Abre el explorador de archivos en donde se encuentra ubicada la terminal en Mac
+
+rm rf       -- 
+rm *
+rm -r -f *
+touch
+cp          origen/archivo /destino/archivoCopiado 
+            archivo1 archivo2
+            carpetaOrigen/*.txt carpetaDestino/
+            carpetaOrigen/* carpetaDestino/
+
+cp -r       carpeta carpeta2
+
+mv
+
+rm -rf /
+
+
+-r -f = -rf
+
+
+echo
+
+echo "" >> archivo
+
+cat         -- Muestra el contenido de un archivo.
+
+nano/vim/vi archivo
+
+
+sudo apt install vim 
+vi/vim      --  -Modo normal:
+                -Modo insercion:
+                    - i - Entrar a modo insercion
+                    - esc - Salir de modo insercion
+                :w - guardar
+                :q - Salir de la instruccion actual
+                :wq - Guardar y salir
+                :help - Ayuda
+
+

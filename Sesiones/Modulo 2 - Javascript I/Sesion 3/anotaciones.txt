@@ -1,0 +1,1 @@
+Las funciones dentro de los objetos son metodos

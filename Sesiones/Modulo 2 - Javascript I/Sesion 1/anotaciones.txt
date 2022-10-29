@@ -1,0 +1,3 @@
+
+LET no permite declarar variables iguales, VAR si.
+CONST permite una variable sin permisos de re asignacion

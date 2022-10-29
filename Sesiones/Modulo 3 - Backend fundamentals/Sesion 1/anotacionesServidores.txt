@@ -1,0 +1,41 @@
+Creacion de llaves publicas y privadas
+
+ssh-keygen          --  -t: Algoritmo a usar (rsa).
+                        -b: Tamaño de la llave (4096).
+                        -C: Cometario para saber que hace esa llave.
+
+* Se crean dos archivos, uno con el nombre y el otro con extencion PUB, esa es la llave publica.
+
+1 - Crear la llave
+2 - cat .ssh/laLlave.pub
+3 - Copiar lo que sale al ejecutar cat
+4 - Entrar a github - github > Settings > SSH and GPG > New SSH Key
+5 - Nombrar y guardar
+6 - En terminal ssh git@github.com
+
+
+iaas - infraestructure as a service.
+
+
+Para conectarse a un servidor con la llave publica:
+- En terminal cd .ssh
+- En terminal ls
+- nano authorized_keys
+- Hasta abajo en el archivo, pegar el contenido de la llave publica de la maquina a la que se desea acceder (la llave ejecutada con cat)
+- En terminal ssh nombreUsuario@Dominio
+- Elegir la opcion Y
+- Para conectarse al servidor, en terminal ssh llave.pem nombreUsuario@Dominio
+
+
+- En terminal ssh nombreUsuario@Dominio
+    -En caso de no estar registrado en el server, se necesita un .pem: ssh llave.pem nombreUsuario@Dominio
+
+
+**** Actualizar el repositorio del sistema
+** update, purge, update
+- apt update
+- apt upgrade
+
+- sudo apt install build-essential
+
+- sudo apt search java

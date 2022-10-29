@@ -1,0 +1,26 @@
+Funcion expresada
+    Se pueden utilizar antes o despues de querer usarla, al crear una funcion expresada será lo primero que leera el codigo
+por lo tanto, se puede utilizar en cualquier momento.
+
+    function funcionExpresada(){
+
+    }
+
+Funcion declarada
+    A diferencia de la funcion expresada, las funciones decalradas solo funcionaran  despues de declararla
+
+    let fn_declarada = funcion(){
+
+    }
+
+Funcion flecha
+    No se puede usar la palabra this, al igual que la funcion declarada, se debe crear antes de poder utilizar.
+    Cuenta con retorno implicito
+
+    const fn_flecha1 = () => {
+
+    }
+
+    //retorno implicito
+    const fn_flecha2 = (param, x) => param + x
+    const fn_flecha2 = param => param + 2
