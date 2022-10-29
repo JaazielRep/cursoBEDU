@@ -1,0 +1,199 @@
+/* quita margen */
+body{
+    margin: 0px;
+}
+
+/*
+display:flex - Acomoda los elementos hijos en fila, respetando la altura del elemento largo.
+*/
+.container-header{
+    width: 100%;
+    background: #fffbf7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-color: #025157;
+}
+
+.container-header > img{
+    /*background-color: blueviolet;*/
+    padding: 20px;
+}
+
+.container-nav{
+    /*background-color: blueviolet;*/
+    width: 700px;
+}
+
+.container-nav > ul{
+    /*background-color: cadetblue;*/
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* ???
+.container-nav > ul > li{
+    display: inline-block;
+}
+*/
+
+.container-nav > ul > li > a{
+    color:#025157;
+    text-decoration: none;
+}
+
+.container-inicioSesion{
+    /*background-color: burlywood;*/
+    padding: 20px;
+}
+
+.container-inicioSesion > a{
+    text-decoration: none;
+}
+
+
+.container-inicioSesion > .btn-header{
+    color: white;
+    background-color: #67b54b;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/*
+####################### section .container-grid1
+grid-template-columns  -  coloca a todos los hijos en una columna de 300 px; 
+                            si se asgianan mas valores, se definira una columna por valor.
+                            repeat(4, 300px) es lo mismo que poner 4 veces 300px 
+
+*/
+
+/* Contenedores features */
+
+.features{
+    display: grid;
+    background-color: #025157;
+    padding: 5% 10%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.features > article{
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid #0069c0;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 28px #2196f3;
+
+    align-items: center;
+
+    background-image: linear-gradient(to right, #131c46, #1d405c); 
+}
+
+.features > article > .feature-content{
+    padding: 5%;
+}
+
+.features > article > .feature-content > h3{
+    font-size: 24px;
+    color: #7f00b2;
+    font-weight: 400;
+}
+
+.features > article > .feature-content > p{
+    font-size: 16px;
+    color: #97e9ff;
+    font-weight: 400;
+}
+
+.features > article > .feature-content > a{
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.features > article > .feature-img{
+    /*background-color: grey;*/
+    position: relative;
+    width: 140%;
+    right: -10px;
+    top: -170px;
+}
+
+.features > article > .feature-img > img{
+    max-width: 100%;
+}
+
+
+.promo-container > .articlesPromo-container{
+    padding: 5% 10%;
+    margin-bottom: 10px;;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    border: 1px solid gray;
+}
+
+.promo-container > .articlesPromo-container > article{
+    
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+.promo-video > video{
+    width: 100%;
+}
+
+.promo-articulo > h3{
+    font-size: 40px;
+    color: #025157;
+}
+
+.promo-articulo > div > label{
+    color: #8b8b8bcc;
+    margin-top: 15px;
+}
+
+.promo-articulo > div > form{
+    height: 55px;
+}
+
+.promo-articulo > div > form > button{
+    background-color: #025157;
+    color: #fff;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 6px 20px;
+    margin-left: -10px;
+    height: 100%;
+}
+
+#nm_textInput1{
+    border: 1px solid #b6b6b6;
+    padding: 6px 20px;
+    width: 60%;
+    border-radius: 8px;
+    height: 100%;
+}
+
+
+/*
+
+
+.promo{ display: flex; width: 70%; margin: 100px 180px; align-items: center; } 
+.promo > .Container-video { display: flex; align-items: center; } 
+.promo > .Container-publish { display: flex; flex-direction: column; margin-left: 20px; } 
+.promo > .Container-publish > h3{ font-family: "Alegreya", serif; font-size: 30px; line-height: 28px; color: #025157; height: 100px; } 
+.promo > .Container-publish > p{ font-size: 16px; color: #343434; line-height: 1.5; margin-bottom: 20px; height: 136px; } 
+
+
+*/
