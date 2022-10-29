@@ -55,3 +55,22 @@
         hint: to the same ref. You may want to first integrate the remote changes
         hint: (e.g., 'git pull ...') before pushing again.
         hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+        
+        
+#########################################################
+#      ERROR - Hacer push con repositorio remoto        #
+#########################################################
+
+*** Updates were rejected because the tip of your current branch is behind
+
+- Revisar si se tienen mas ramas en git: git branch
+- Unir el contenido de las ramas en caso de que se quiera concentrar el contenido
+	- Posicionarse en master: git checkout master
+	- Unir el contenido de la rama que se desea: git merger RAMA_N
+	- Realizar un pull con los cambios en el server: git pull --rebase 
+		- En caso de cancelar el pull: git rebase --abort 
+	- Se actualizara lo contenido en el repositorio con lo que se tiene en el local.
+	- Realizar commit: git add. 
+		- git commit -m "Commit"
+	- Realizar el push: git push origin.
+
