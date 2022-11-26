@@ -39,3 +39,6 @@ Para conectarse a un servidor con la llave publica:
 - sudo apt install build-essential
 
 - sudo apt search java
+
+
+ssh ubuntu@ec2-35-88-187-234.us-west-2.compute.amazonaws.com

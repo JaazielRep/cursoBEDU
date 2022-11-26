@@ -1,0 +1,26 @@
+*** NGINX - Servidor de aplicaciones
+
+- sudo apt install nginx
+
+- sudo service SERVICIO stop/status/start
+
+- cd /var/www/html : ahi se almacenan los archivos html que abrira el servidor
+
+- scp origenLocal Destino
+
+- scp -r MiCarpeta usuario@dominio:/var/www/html - sin permisos
+
+- scp -r MiCarpeta usuario@dominio:/home/ubuntu
+
+- en el servidor: sudo mv MiCarpeta/ /var/www/html
+
+
+*** Patrones de arquitectura
+
+- MVC: Model View Controller
+	- Controlador: Node Js
+	- Vista: HTML, CSS, JS
+	- Modelo: Base de datos
+	
+- Arquitectura de capas
+	- Capa de controlador, vista, modelo, negocio

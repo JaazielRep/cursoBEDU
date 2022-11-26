@@ -1,0 +1,7 @@
+ACID - Atomicity, Consistency, Isolation, Durability.
+
+BEGIN TRANSACTION
+    UPDATE tabla
+    SET campo = nuevoValor
+    WHERE campo = valor;
+END

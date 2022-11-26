@@ -1,0 +1,65 @@
+Base de datos           :   Conjunto de datos pertenecientes al mismo contexto.
+
+
+
+_________________       ________________        ________________        _________________       ________________
+|               |       |               |       |               |       |               |       |               |
+|___1-Usuarios__|       |___2-Artistas  |       |__3-Albumes____|       |___4-Canciones_|       |__5-Genero_____|
+|id             |       |id             |       |id             |       |id             |       |id             |
+|Nombre usr.    |       |Nombre         |       |Nombre         |       |Nombre         |       |Nombre         |
+|Correo elec    |       |Reproducciones |       |Lanzamiento    |       |Duracion       |       |               |
+|Nombre comp    |       |Pais           |       |               |       |Reproducciones |       |               |
+|Numero tel     |       |               |       |               |       |Explicita      |       |               |
+|Pais           |       |               |       |               |       |               |       |               |
+|               |       |               |       |               |       |               |       |               |
+|_______________|       |_______________|       |_______________|       |_______________|       |_______________|
+|Escuchan(4)    |       |interpretan(4) |       |Tienen(4)      |       |Tienen(3)      |       |               |
+|               |       |               |       |               |       |Tienen(5)      |       |               |    
+|               |       |               |       |               |       |               |       |               |
+|_______________|       |_______________|       |_______________|       |_______________|       |_______________|
+
+
+_________________       ________________        ________________        _________________       ________________         ________________
+|               |       |               |       |               |       |               |       |               |        |               |
+|_1-Proveedores_|       |___2-Cond Pago |       |__3-Productos__|       |___4-O. Compra_|       |__5-Factura____|        |__5-Ord Pago___|
+|PK_id          |       |PK_id          |       |PK_id          |       |PK_id          |       |PK_id          |        |PK_id          |
+|Nombre         |       |Nombre         |       |Nombre         |       |UUID           |       |UUID           |        |Monto          |
+|Correo elec    |       |               |       |Unidad m       |       |FK_Prod        |       |FK_Comp        |        |FK_Fac         |
+|RFC            |       |               |       |               |       |FK_Prov        |       |               |        |               |
+|Razon Soc      |       |               |       |               |       |FK_Cond        |       |               |        |               |
+|               |       |               |       |               |       |               |       |               |        |               |
+|               |       |               |       |               |       |               |       |               |        |               |
+|_______________|       |_______________|       |_______________|       |_______________|       |_______________|        |_______________|
+|               |       |               |       |               |       |Contiene(3)    |       |Pertenece(4)   |        |Pertenece(5)   |
+|               |       |               |       |               |       |Pertenece(1)   |       |               |        |               |
+|               |       |               |       |               |       |Tiene(2)       |       |               |        |               |
+|               |       |               |       |               |       |               |       |               |        |               |
+|_______________|       |_______________|       |_______________|       |_______________|       |_______________|        |_______________|
+
+sudo apt install sqlite3
+
+
+create table BT_Proveedores(
+    idProv integer, 
+    nombreProv text, 
+    correoProv text, 
+    rfcProv texy, 
+    razonSProv text, 
+    primary key (idProv)
+);
+
+create table BT_CondPago(id integer, nombreCond text);
+create table BT_Productos(id integer, nombreProd text, umProd text);
+create table BT_Compra(id integer, idExterno text, partidaOC integer, provOc text, ProdOc text, CondOC text);
+create table BT_Factura(id integer, UUIDFac text, OrdenCFac text);
+create table BT_OrdPago(id integer, idExterno text, UUIDFac text);
+
+select a.id_suario, b.nombreCancion
+from favoritos a
+left join canciones b
+on a.id_cancion = b.idCancion
+where a.id_usuario = 500
+
+
+sqlite
+.exit
