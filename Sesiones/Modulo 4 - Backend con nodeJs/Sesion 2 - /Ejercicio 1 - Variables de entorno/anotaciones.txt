@@ -1,0 +1,18 @@
+npm init -y
+npm install dotenv
+npm install winston - modulo encargado de generar logs
+
+splunk
+
+Apollo server
+	Herramienta para crear backend con GraphQl
+	Apollo-server ya no existe, se reemplazo por @apollo/server
+
+	https://www.apollographql.com/docs/apollo-server/
+	https://node.green/
+
+	npm init -y
+	nem install graphql 
+	Npm install @apollo/server
+
+npm install --save-dev nodemon

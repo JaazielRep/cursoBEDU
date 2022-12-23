@@ -1,0 +1,25 @@
+# npm --version
+# node -v
+# npm init -y : Crea un archivo package.json que servira para indicar las 
+dependencias
+# npm install express : Se comunica con npm y busca el paquete express, lo 
+instala y actualiza el paquete package.json. Adicional se crea un 
+package-lock.json que es donde se registran las versiones instaladas. De 
+igual forma, se crea una carpeta llamada node_modules y cada modulo 
+descargado se almacenara dentro de dicha carpeta. Al descargar un paquete, 
+npm revisa el package.json de ese paquete y baja todos los modulos que 
+requiere ese paquete para funcionar.
+	Al subir el proyecto a github la carpeta node_modules se omite por 
+el peso, si se requiere recuperar la carpeta al clonar el repositorio se 
+debe ejecutar npm install y la carpeta se regenerará
+
+Una vez creado un archivo js dentro del directorio en donde se instalo el 
+paquete, se ejecuta mediante la consola con el comando node archivo.js
+
+control + c : Detiene el servidor
+
+# graphql concentra todo en un endpoint y de ahi utiliza query language que 
+disponibiliza los datos mediante resolver que son funciones en JS
+
+
+npm install express graphql express-graphql
